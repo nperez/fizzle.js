@@ -1,0 +1,34 @@
+fizzle.js
+
+Fizzle is a port of the Sizzle CSS Selector engine to E4X
+(http://www.ecma-international.org/publications/standards/Ecma-357.htm).
+
+Why would anyone do this? Well, I'd like to eventually build a templating
+engine based solely around javascript and HTML. Basically a backend module
+that executes javascript to manipulate HTML. And why would anyone want that?
+For me, personally, this seems like a wide spread enough problem that everyone
+seems to have their own solution. Everything from mixing code and content to
+strict separation of code and content. And typically those technologies
+require you to learn some new DSL that is uglier than a poop oozing diaper (I'm
+looking at you TT).
+
+It sucks. I want something that will enable the designers and front end UI
+people I worth with to be able to massage their own templates using the skills
+they already have, javascript and HTML.
+
+Fizzle is the first step toward that goal. jQuery unfortunately does not work
+without a DOM present (ie. a web browser). But the CSS selectors are awesome.
+That is where Sizzle comes into the picture. Sizzle is what jQuery uses under
+the hood to do its CSS selecting. So in order to be able to have slick CSS 
+selectors for my future backend environment (and more easily transition those
+front end UI skills to the backend), I took a chainsaw to the guts of Sizzle
+so that it will work absent a DOM.
+
+Thus, Fizzle was born. 
+
+Will Fizzle ever become more than just a CSS selector that works against E4X?
+Unlikely. But, I am thinking I will make a very simple, naive port of the
+manipulations in jQuery to work with E4X and blend in Fizzle.
+
+Thanks to The Dojo Foundation for releasing their code under Free Software
+licenses.
